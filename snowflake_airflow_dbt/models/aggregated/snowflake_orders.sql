@@ -1,3 +1,14 @@
+{{ 
+    config(
+        materialized='table',
+        transient=false,
+        post_hook=[
+            "SELECT 1;
+            {{clone()}}"
+            ]
+
+    )
+}}
 select
     first_name,
     last_name,
