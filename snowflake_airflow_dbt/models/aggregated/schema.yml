@@ -1,0 +1,18 @@
+
+version: 2
+
+models:
+  - name: snowflake_orders
+    description: "A starter dbt model"
+    columns:
+      - name: BILL_CUTOMER_SK_ID
+        description: "The primary key for this table"
+        tests:
+          - not_null
+      - name: _pk
+        description: "The primary key for this table"
+        tests:
+          - not_null
+          - unique
+
+
