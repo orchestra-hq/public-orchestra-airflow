@@ -10,7 +10,7 @@ models:
         tests:
           - unique
           - not_null
-      - name: id
+      - name: canonical_vid
         description: "The primary key for this table"
         tests:
           - unique

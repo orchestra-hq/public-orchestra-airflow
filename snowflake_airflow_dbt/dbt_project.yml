@@ -47,3 +47,6 @@ models:
     aggregated:
       +materialized: table
       schema: aggregated
+    production:
+      +materialized: table
+      schema: prod

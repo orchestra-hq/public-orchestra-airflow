@@ -14,3 +14,23 @@ sources:
             tests:
               - unique
               - not_null
+
+  - name: snowflake
+    database: SNOWFLAKE_SAMPLE_DATA 
+    schema: tpcds_sf100tcl  
+    tables:
+      - name: customer
+        description: "Snowflake sample customer dataset"
+        columns:
+          - name: C_CUSTOMER_ID
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+      - name: catalog_sales
+        description: "Snowflake sample customer dataset"
+        columns:
+          - name: catalog_sales
+            description: "The primary key for this table"
+            tests:
+              - not_null
