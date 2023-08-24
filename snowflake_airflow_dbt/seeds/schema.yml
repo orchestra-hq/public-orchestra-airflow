@@ -1,0 +1,10 @@
+
+version: 2
+
+seeds:
+  - name: random
+    description: An arbitrary seed
+    columns:
+      - name: a
+        tests:
+          - not_null

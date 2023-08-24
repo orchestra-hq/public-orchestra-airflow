@@ -35,6 +35,7 @@ models:
     # Config indicated by + and applies to all files under models/example/
     clean:
       +materialized: table
+      +transient: false
       schema: clean
     staging:
       +materialized: table
