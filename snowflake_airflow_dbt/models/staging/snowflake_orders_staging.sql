@@ -18,3 +18,4 @@ select
 from {{ref('snowflake_orders_clean')}} a
 left join {{ref('snowflake_customers_clean')}} b 
 on a.bill_cutomer_sk_id = b.customer_sk_id
+where a.ship_date is not null

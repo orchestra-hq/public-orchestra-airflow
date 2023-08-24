@@ -11,7 +11,7 @@ select
     sha2_binary(concat(
         ifnull(cast( bill_cutomer_sk_id as string), 'None') ,
         ifnull(cast(ship_customer_sk_id as string), 'None'),
-        ifnull(cast(ship_date as string), 'None'),
+        ifnull(cast(ship_date as string), 'None')
         
         )) _pk
 
