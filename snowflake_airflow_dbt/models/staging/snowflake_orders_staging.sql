@@ -12,7 +12,8 @@ select
     a.cost,
     b.first_name,
     b.last_name,
-    b.email
+    b.email,
+    sha2_binary(a.order_number) _pk
 
 from {{ref('snowflake_orders_clean')}} a
 left join {{ref('snowflake_customers_clean')}} b 

@@ -1,0 +1,14 @@
+
+version: 2
+
+models:
+  - name: snowflake_orders_staging
+    description: "A staging model for orders"
+    columns:
+      - name: _pk
+        description: "The primary key for this table"
+        tests:
+          - not_null
+          - unique
+
+

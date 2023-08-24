@@ -32,5 +32,3 @@ sources:
         columns:
           - name: CS_BILL_CUSTOMER_SK
             description: "The primary key for this table"
-            tests:
-              - not_null

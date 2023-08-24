@@ -3,7 +3,7 @@ select
     last_name,
     email,
     bill_cutomer_sk_id,
-    ship_customer_sk_id
+    ship_customer_sk_id,
     ship_date,
     count(distinct order_number) orders,
     sum(quantity) quantity,
@@ -22,5 +22,5 @@ group by
     last_name,
     email,
     bill_cutomer_sk_id,
-    ship_customer_sk_id
+    ship_customer_sk_id,
     ship_date

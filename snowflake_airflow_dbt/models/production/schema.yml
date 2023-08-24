@@ -1,0 +1,14 @@
+
+version: 2
+
+models:
+  - name: prod_snowflake_orders
+    description: "The production copy of snowflake orders"
+    columns:
+      - name: _pk
+        description: "The primary key for this table"
+        tests:
+          - not_null
+          - unique
+
+
