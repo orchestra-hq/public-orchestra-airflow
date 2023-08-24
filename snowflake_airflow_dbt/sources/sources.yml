@@ -1,0 +1,16 @@
+
+version: 2
+
+sources:
+  - name: base
+    database: SNOWFLAKE_WORKING 
+    schema: PUBLIC  
+    tables:
+      - name: hubspot_contacts_raw
+        description: "Contacts from our CRM"
+        columns:
+          - name: vid
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null

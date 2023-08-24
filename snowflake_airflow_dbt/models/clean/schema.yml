@@ -2,12 +2,24 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
+  - name: hubspot_contacts_clean
     description: "A starter dbt model"
     columns:
+      - name: vid
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
       - name: id
         description: "The primary key for this table"
         tests:
           - unique
+          - not_null
+  - name: seed_clean
+    description: "A starter dbt model"
+    columns:
+      - name: a
+        description: "The primary key for this table"
+        tests:
           - not_null
 
