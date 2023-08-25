@@ -18,4 +18,8 @@ models:
         tests:
           - not_null
           - unique
-
+      - name: ship_date
+        description: "The primary key for this table"
+        tests:
+          - test_recent_days:
+              num_days: 1000000
