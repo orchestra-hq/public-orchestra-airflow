@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+  - name: snowflake_customers_clean
+    description: "Customers with dates cleaned up and pk added"
+    columns:
+      - name: _pk
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+  - name: snowflake_orders_clean
+    description: "Orders with dates cleaned up and pk added"
+    columns:
+      - name: _pk
+        description: "The primary key for this table"
+        tests:
+          - not_null
+          - unique
+

@@ -2,12 +2,13 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: snowflake_orders_staging
+    description: "A staging model for orders"
     columns:
-      - name: id
+      - name: _pk
         description: "The primary key for this table"
         tests:
-          - unique
           - not_null
+          - unique
+
 

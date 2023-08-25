@@ -1,0 +1,34 @@
+
+version: 2
+
+sources:
+  - name: base
+    database: SNOWFLAKE_WORKING 
+    schema: PUBLIC  
+    tables:
+      - name: hubspot_contacts_raw
+        description: "Contacts from our CRM"
+        columns:
+          - name: vid
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+
+  - name: snowflake
+    database: SNOWFLAKE_SAMPLE_DATA 
+    schema: tpcds_sf100tcl  
+    tables:
+      - name: customer
+        description: "Snowflake sample customer dataset"
+        columns:
+          - name: C_CUSTOMER_ID
+            description: "The primary key for this table"
+            tests:
+              - unique
+              - not_null
+      - name: catalog_sales
+        description: "Snowflake sample customer dataset"
+        columns:
+          - name: CS_BILL_CUSTOMER_SK
+            description: "The primary key for this table"

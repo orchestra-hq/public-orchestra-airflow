@@ -1,0 +1,20 @@
+
+version: 2
+
+models:
+  - name: snowflake_orders
+    description: "A starter dbt model"
+    columns:
+      - name: BILL_CUTOMER_SK_ID
+        description: "The id of the billed customer"
+      - name: _pk
+        description: "The primary key for this table"
+        tests:
+          - not_null
+          - unique
+      - name: ship_date
+        description: "The shipment date"
+        tests:
+          - not_null
+
+
