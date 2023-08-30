@@ -14,19 +14,19 @@ jobs:
         echo "🍏 This Ingesting data from multiple sources"
     - name: Test sources
       run: |
-        echo "🍏 Test sources"
+        echo ""✨✨✨✨ Test sources"
     - name: dbt (Staging)
       run: |
-        echo "🍏 We are now running dbt in a staging environment"
+        echo ""🐱‍🏍 We are now running dbt in a staging environment"
     - name: Test aggregate tables (Staging)
       run: |
-        echo "🍏 Testing the aggregate table"
+        echo "✨✨✨✨ Testing the aggregate tables"
     - name: dbt (Production)
       run: |
-        echo "🍏 Testing the aggregate table"
+        echo "🐱‍🏍 Running dbt in production again"
     - name: Test aggregate tables (Production)
       run: |
-        echo "🍏 Testing the aggregate table" 
+        echo " ✨✨✨✨Testing aggregate tables in production" 
     - name: Provision roles and access (Production) 
       run: |
-        echo "🍏 Testing the aggregate table"
+        echo "✌ Ensuring access to production schemas, databases and tables is restricted"
