@@ -3,12 +3,30 @@ name: Python Package using Conda
 on: [push]
 
 jobs:
-  build-linux:
+  data-pipeline:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 5
 
     steps:
-    - name: Hello there
+    - name: Ingest data
       run: |
-        echo "🍏 This job's status is ${{ job.status }}."
+        echo "🍏 This Ingesting data from multiple sources"
+    - name: Test sources
+      run: |
+        echo "🍏 Test sources"
+    - name: dbt (Staging)
+      run: |
+        echo "🍏 We are now running dbt in a staging environment"
+    - name: Test aggregate tables (Staging)
+      run: |
+        echo "🍏 Testing the aggregate table"
+    - name: dbt (Production)
+      run: |
+        echo "🍏 Testing the aggregate table"
+    - name: Test aggregate tables (Production)
+      run: |
+        echo "🍏 Testing the aggregate table" 
+    - name: Provision roles and access (Production) 
+      run: |
+        echo "🍏 Testing the aggregate table"
