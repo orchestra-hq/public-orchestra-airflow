@@ -1,0 +1,14 @@
+name: Python Package using Conda
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - name: Hello there
+      run: |
+        echo "🍏 This job's status is ${{ job.status }}."
