@@ -1,0 +1,32 @@
+name: Python Package using Conda
+
+on: [push]
+
+jobs:
+  data-pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - name: Ingest data
+      run: |
+        echo "🍏 This Ingesting data from multiple sources"
+    - name: Test sources
+      run: |
+        echo ""✨✨✨✨ Test sources"
+    - name: dbt (Staging)
+      run: |
+        echo ""🐱‍🏍 We are now running dbt in a staging environment"
+    - name: Test aggregate tables (Staging)
+      run: |
+        echo "✨✨✨✨ Testing the aggregate tables"
+    - name: dbt (Production)
+      run: |
+        echo "🐱‍🏍 Running dbt in production again"
+    - name: Test aggregate tables (Production)
+      run: |
+        echo " ✨✨✨✨Testing aggregate tables in production" 
+    - name: Provision roles and access (Production) 
+      run: |
+        echo "✌ Ensuring access to production schemas, databases and tables is restricted"
