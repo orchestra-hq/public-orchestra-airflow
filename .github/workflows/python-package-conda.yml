@@ -14,10 +14,10 @@ jobs:
         echo "🍏 This Ingesting data from multiple sources"
     - name: Test sources
       run: |
-        echo ""✨✨✨✨ Test sources"
+        echo "✨✨✨✨ Test sources"
     - name: dbt (Staging)
       run: |
-        echo ""🐱‍🏍 We are now running dbt in a staging environment"
+        echo "🐱‍🏍 We are now running dbt in a staging environment"
     - name: Test aggregate tables (Staging)
       run: |
         echo "✨✨✨✨ Testing the aggregate tables"
